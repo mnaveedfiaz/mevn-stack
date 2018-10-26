@@ -1,20 +1,14 @@
 // importing modules
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var path = require('path');
+const express        = require('express');
+const MongoClient    = require('mongodb').MongoClient;
+const bodyParser     = require('body-parser');
+const app            = express();
 
-var app = express();
-
-// port no
 const port = 3000;
 
-//testing route
-app.get('/',(req, res)=>{
-	res.send("Foo bar");
-});
+app.use(bodyParser.urlencoded({ extended: true }));
 
+require('./app/routes')(app, {});
 app.listen(port, ()=>{
 	console.log("Server started at port:"+port);
 });

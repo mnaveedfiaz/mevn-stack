@@ -4,7 +4,8 @@
   "description": "A MEVN application for take order and serving food to the tables in restaurants. ",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "author": "Naveed Fiaz",
   "license": "ISC",
@@ -12,7 +13,9 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.4",
-    "mongoose": "^5.3.3",
+    "mongoose": "^5.3.3"
+  },
+  "devDependencies": {
     "nodemon": "^1.18.4"
   }
 }
