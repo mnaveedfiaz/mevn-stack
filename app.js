@@ -9,7 +9,7 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-MongoClient.connect("mongodb://127.0.0.1:27017/contactsDb",{ useNewUrlParser: true }, (err, database) => {
+MongoClient.connect(db.url,{ useNewUrlParser: true }, (err, database) => {
   if (err) return console.log(err)
   console.log("Connected to mongodb");	
   require('./app/routes')(app, database);
