@@ -11,8 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 MongoClient.connect(db.url,{ useNewUrlParser: true }, (err, database) => {
   if (err) return console.log(err)
-  console.log("Connected to mongodb");	
-  require('./app/routes')(app, database);
+  console.log("Connected to mongodb");
+  dbInstance = database.db('contactsDb');	
+  require('./app/routes')(app, dbInstance);
 	
 	app.listen(port, ()=>{
 		console.log("Server started at port:"+port);

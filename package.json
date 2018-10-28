@@ -1,7 +1,7 @@
 {
-  "name": "restaurant_order_management",
+  "name": "Contacts List",
   "version": "1.0.0",
-  "description": "A MEVN application for take order and serving food to the tables in restaurants. ",
+  "description": "A MEVN application for managing contacts. ",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
